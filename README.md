@@ -17,7 +17,8 @@
 - **方式一：直接下载使用**
   直接下载 `index.html` 文件，在电脑上双击用浏览器打开即可运行，零环境依赖。
 - **方式二：在线体验**
-  点击访问在线地址：[点击进入在线简历优化器](https://jotaroustar.github.io/resume-optimizer/)
+  - 主地址：[jotarou.com/tools/resume](https://jotarou.com/tools/resume)
+  - 备用地址：[jotaroustar.github.io/resume-optimizer](https://jotaroustar.github.io/resume-optimizer/)
 
 ## 🔑 高级功能需要 API Key
 
@@ -33,11 +34,10 @@
 工具内预设了两款兼顾速度与高性价比的高清大模型：
 
 | 模型名称 | 特点与适用场景 |
-| :--- | :--- |
 ⚙️ 自定义API Base URL（可折叠高级设置）
 推荐模型
-| **gpt-4o-mini** | 默认推荐。响应速度极快，费用极省，适合常规简历的改写与基础分析。 |
-| **deepseek-chat** | 更低的价格。长文本处理能力强，逻辑缜密，适合深度进行 JD 匹配和面试问题预测。 |
+  gpt-4o-mini** | 默认推荐。响应速度极快，费用极省，适合常规简历的改写与基础分析。 
+  deepseek-chat** | 更低的价格。长文本处理能力强，逻辑缜密，适合深度进行 JD 匹配和面试问题预测。 
 
 ## 📄 许可证
 
