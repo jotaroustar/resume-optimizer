@@ -272,21 +272,6 @@ if(__exports != exports)module.exports = exports;return module.exports}));
       margin-top: 6px;
     }
     
-    .adv-toggle {
-      font-size: 12px;
-      color: var(--accent);
-      cursor: pointer;
-      text-decoration: underline;
-      text-decoration-color: var(--border);
-      text-underline-offset: 4px;
-    }
-    .adv-panel {
-      display: none;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px dashed var(--border);
-    }
-    .adv-panel.visible { display: block; }
     .form-item { margin-bottom: 10px; }
     .form-item label { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
 
@@ -575,7 +560,6 @@ if(__exports != exports)module.exports = exports;return module.exports}));
   <div class="card">
     <div class="card-title">
       <span>⚙️ 设置</span>
-      <span class="adv-toggle" onclick="toggleAdv()">高级设置 ⚙️</span>
     </div>
 
     <div style="margin-bottom:10px;">
@@ -602,12 +586,6 @@ if(__exports != exports)module.exports = exports;return module.exports}));
       <div class="key-hint">Key 仅保存在本地浏览器，不会上传至任何服务器</div>
     </div>
 
-    <div class="adv-panel" id="adv-panel">
-      <div class="form-item">
-        <label>自定义接口地址 (Base URL)</label>
-        <input type="text" id="api-base" placeholder="默认: https://jotarou.com/v1 (支持自建代理)">
-      </div>
-    </div>
   </div>
 
   <div class="tabs">
@@ -749,17 +727,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const savedKey = localStorage.getItem('jotarou_api_key');
   if (savedKey) document.getElementById('apiKey').value = savedKey;
   
-  const savedBase = localStorage.getItem('jotarou_api_base');
-  if (savedBase) document.getElementById('api-base').value = savedBase;
 });
 
 // Key 保存
 document.getElementById('apiKey').addEventListener('input', function() {
   localStorage.setItem('jotarou_api_key', this.value);
 });
-document.getElementById('api-base').addEventListener('input', function() {
-  localStorage.setItem('jotarou_api_base', this.value);
-});
+
 
 // ── 模型选择 ──
 function selectModel(btn) {
@@ -775,11 +749,6 @@ function toggleKeyVisibility() {
   keyVisible = !keyVisible;
   input.type = keyVisible ? 'text' : 'password';
   btn.textContent = keyVisible ? '隐藏' : '显示';
-}
-
-function toggleAdv() {
-  const panel = document.getElementById('adv-panel');
-  panel.classList.toggle('visible');
 }
 
 function switchTab(name) {
@@ -899,10 +868,9 @@ async function callAPI(systemPrompt, userPrompt, signal) {
     return null;
   }
   
-  let baseUrl = document.getElementById('api-base').value.trim() || 'https://jotarou.com/v1';
-  baseUrl = baseUrl.replace(/\/+$/, ''); // 移除末尾斜杠
+  let baseUrl = 'https://jotarou.com/v1';
+
   
-  // 统一走 jotarou.com 网关
 
   const resp = await fetch(`${baseUrl}/chat/completions`, {
     method: 'POST',
