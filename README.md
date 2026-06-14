@@ -44,9 +44,8 @@
 
 > 高级设置中支持自定义 API Base URL，兼容任意 OpenAI 兼容接口。
 
-## 📄 许可证
-
-本项目基于 [MIT License](LICENSE) 开源。
 
 ---
 由 [Jotarou API](https://jotarou.com) 提供强大的 AI 文本处理与语义分析能力支持 💖
+
+© 2026 jotarou.com · 代码版权所有，禁止直接复制用于商业产品
