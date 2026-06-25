@@ -1,58 +1,66 @@
-# 📄 AI 简历优化器 
+# 📝 📄 简历优化器 (Resume Optimizer)
 
-一个基于纯前端构建的 AI 辅助简历优化工具。支持纯前端规则诊断、AI 智能逐段改写、目标职位 JD 匹配度分析、面试自我介绍生成以及面试问题预测。开箱即用，无需安装。
+[![License](https://img.shields.io/badge/license-Apache%202.0%20%2F%20MPL%202.0-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Web-orange.svg)]()
+[![Pure JS](https://img.shields.io/badge/Vanilla%20JS-100%25-yellow.svg)]()
 
-✨ 功能特性
+一款**纯前端、轻量级、零服务器依赖**的智能简历优化工具。集成传统的简历规则硬编码诊断（免费模式）与现代 LLM（大语言模型）的深度改写、匹配、面试预测等高级功能。
 
-✨ 简历润色：
-  🔍 规则检查（免费模式）：无需 API Key，纯本地对简历进行强弱动词检测、中英文标点混用、过短段落及量化表达缺失等多维度规则诊断，输出诊断报告。
-  
-  🤖 AI 改写（高级模式）：调用 AI 对简历逐段改写，增强动词力度、补充量化表达，输出"原文 vs 优化后"的精准对比及改动说明。
-  
-🎯 JD 匹配分析：将简历与目标职位招聘要求（Job Description）深度对比，智能输出匹配评分、已匹配项、缺失/薄弱项及具体修改建议。
-
-💬 自我介绍生成：AI 根据简历内容自动生成语气正式、结构清晰的面试开场自我介绍，支持按时长灵活定制（30秒 / 标准1分钟 / 详细2分钟）。
-
-🧠 面试问题预测：深挖项目经历，精准预测面试官最可能提问的问题，每题附 2-3 句回答方向与引导思路，帮你提前准备不慌场。
-
-🌐 智能语言识别：自动识别输入简历的语言（中文/英文/日文），AI 全程以相同语言进行分析与输出。
-
-🔒 隐私安全保障：API Key 仅保存在本地浏览器，不上传至任何第三方服务器。
-
-## 🛠️ 快速使用
-
-- **方式一：直接下载使用**
-  直接下载 `index.html` 文件，在电脑上双击用浏览器打开即可运行，零环境依赖。
-- **方式二：在线体验**
-  - 主地址：[jotarou.com/tools/resume](https://jotarou.com/tools/resume)
-  - 备用地址：[jotaroustar.github.io/resume-optimizer](https://jotaroustar.github.io/resume-optimizer/)
-
-## 🔑 高级功能需要 API Key
-
-基础的“规则检查”完全免费，无需密钥。
-使用 **AI 改写**、**JD 匹配**、**自我介绍** 及 **面试预测** 等高级功能需要输入 API Key，数据使用 [Jotarou API](https://jotarou.com) 进行安全转发：
-
-- **Base URL**: `https://jotarou.com`
-- **注册地址**: `https://jotarou.com/register`
-- *注册即送 7 元试用额度，保存在本地浏览器，随时可用。*
-
-## ⚙️ 支持的 AI 模型
-
-工具内预设了两款兼顾速度与高性价比的高清大模型：
-
-## ⚙️ 支持的 AI 模型
-
-工具内预设了两款兼顾速度与高性价比的模型：
-
-| 模型名称 | 特点与适用场景 |
-| :--- | :--- |
-| **gpt-4o-mini** | 默认推荐。响应速度极快，费用极省，适合常规简历的改写与基础分析。 |
-| **deepseek-chat** | 更低的价格。长文本处理能力强，逻辑缜密，适合深度进行 JD 匹配和面试问题预测。 |
-
-> 高级设置中支持自定义 API Base URL，兼容任意 OpenAI 兼容接口。
-
+A lightweight, pure front-end, zero-server-dependency AI resume optimization tool. It integrates traditional hard-coded rule diagnostics with modern LLM deep re-writing, JD matching, and interview simulation features.
 
 ---
-由 [Jotarou API](https://jotarou.com) 提供强大的 AI 文本处理与语义分析能力支持 💖
 
-© 2026 jotarou.com · 代码版权所有，禁止直接复制用于商业产品
+## ✨ 核心特性 / Features
+
+* **⚡ 纯前端架构 (Serverless & Private)**：项目仅由单个 HTML 文件构成，所有逻辑均在浏览器本地运行。API Key 仅保存在用户的 `localStorage` 中，绝不上传至第三方服务器，最大程度保障隐私安全。
+* **🔍 免费规则检查 (Rule-Based Diagnostic)**：
+    * 自动检索简历中的**弱动词**（如：负责、参与、协助）。
+    * 检测**中英文标点混用**以及异常空白行。
+    * 智能识别**量化数据缺失**（未发现数字），并给出修改范例。
+* **🤖 多语种 AI 深度优化 (LLM Powered)**：
+    * **简历润色**：原文 vs 优化后对比高亮展示，强化动词、自动补全量化表达逻辑。
+    * **JD 匹配分析**：输入目标岗位描述，自动输出匹配评分 (0-100)、已覆盖技能、缺失关键项及针对性修改建议。
+    * **自我介绍生成**：支持 30秒、1分钟、2分钟三种不同时长的正式面试开场白定制。
+    * **面试问题预测**：根据简历项目深挖潜在的面试硬核问题，并附带 STAR 法则回答思路引导。
+* **🌐 智能语言自适应 (Language Agnostic)**：无缝支持**中文、英文、日文**简历，AI 将自动识别输入源语言并使用相同语言进行对等高质量输出。
+* **📋 完美富文本复制 (Rich-Text Copying)**：内置异步 Clipboard 级一键复制，保留 Markdown 渲染后的高亮框、粗体和列表排版，可直接完美粘贴至 Word 或飞书/钉钉文档。
+
+---
+
+## 🛠️ 技术栈 / Tech Stack
+
+项目坚持“极简即正义”的理念，无 Webpack/Vite 繁琐构建，通过内联高性能生产库实现开箱即用：
+* **HTML5 & CSS3**：原生 CSS 变量实现高级复古米色调（Woodland/Warm Neutral）响应式 UI。
+* **JavaScript (ES6+)**：原生异步 Fetch 流式可中断控制（`AbortController`）。
+* **[marked.js (v18.0.5)](https://github.com/markedjs/marked)**：嵌入式高性能 Markdown 解析器。
+* **[DOMPurify (v3.4.10)](https://github.com/cure53/DOMPurify)**：严苛的客户端 XSS 过滤器，确保 AI 生成的 HTML 安全。
+
+---
+
+## 🚀 快速开始 / Quick Start
+
+### 方式一：直接运行 (本地使用)
+1. 克隆或下载本仓库。
+2. 双击运行 `index.html` 即可在本地浏览器中直接使用全部功能。
+
+### 方式二：静态托管 (部署上线)
+由于该项目是完全静态的，您可以将其一键部署到免费的托管平台：
+* **GitHub Pages**: 将代码推送到仓库，并在 `Settings -> Pages` 中开启即可。
+* **Vercel / Netlify / Cloudflare Pages**: 关联本仓库，构建命令留空，发布目录选择根目录。
+
+---
+
+## ⚙️ 接入 API 平台说明 / API Configuration
+
+本工具默认支持标准的 OpenAI API 格式兼容接口：
+* **默认模型**：`gpt-4o-mini`（快速且兼顾性价比）、`deepseek-chat`（极低价格）。
+* **自定义端点**：默认请求 `https://jotarou.com/v1/chat/completions`。若要在 GitHub 个人魔改版中使用官方或其他转发接口，可直接修改代码中 `callAPI` 函数内的 `baseUrl` 变量。
+
+---
+
+## 📄 开源协议 / License
+
+Copyright © 2026 [jotarou.com](https://jotarou.com). All rights reserved.  
+未经授权的复制或商业用途均被禁止。  
+
+部分前端开源依赖库（Marked, DOMPurify）遵循其各自的 MIT / Apache 2.0 / MPL 2.0 开源协议。
