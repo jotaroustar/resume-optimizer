@@ -1,12 +1,24 @@
 # 📝 📄 简历优化器 (Resume Optimizer)
 
-[![License](https://img.shields.io/badge/license-Apache%202.0%20%2F%20MPL%202.0-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Web-orange.svg)]()
+<!-- Copyright © 2026 jotarou.com. All rights reserved.
+     未经授权的复制或商业用途均被禁止。 -->
+
+[![Live Demo](https://img.shields.io/badge/Production-jotarou.com-d4622a.svg)](https://jotarou.com/tools/)
+[![GitHub Pages](https://img.shields.io/badge/Backup-GitHub%20Pages-2d7a4f.svg)](https://jotaroustar.github.io/resume-optimizer/)
 [![Pure JS](https://img.shields.io/badge/Vanilla%20JS-100%25-yellow.svg)]()
 
 一款**纯前端、轻量级、零服务器依赖**的智能简历优化工具。集成传统的简历规则硬编码诊断（免费模式）与现代 LLM（大语言模型）的深度改写、匹配、面试预测等高级功能。
 
 A lightweight, pure front-end, zero-server-dependency AI resume optimization tool. It integrates traditional hard-coded rule diagnostics with modern LLM deep re-writing, JD matching, and interview simulation features.
+
+---
+
+## 🚀 🚀 在线使用 / Live Demo
+
+本项目已双线部署，您可以选择以下任意地址直接免安装在线使用：
+
+* **🌐 官方生产环境（主站）**: [https://jotarou.com/tools/](https://jotarou.com/tools/)
+* **⚡ GitHub Pages 镜像（备用）**: [https://jotaroustar.github.io/resume-optimizer/](https://jotaroustar.github.io/resume-optimizer/)
 
 ---
 
@@ -37,16 +49,11 @@ A lightweight, pure front-end, zero-server-dependency AI resume optimization too
 
 ---
 
-## 🚀 快速开始 / Quick Start
+## 💻 本地运行 / Local Development
 
-### 方式一：直接运行 (本地使用)
-1. 克隆或下载本仓库。
+如果您希望在本地独立运行：
+1. 克隆或下载本仓库源码。
 2. 双击运行 `index.html` 即可在本地浏览器中直接使用全部功能。
-
-### 方式二：静态托管 (部署上线)
-由于该项目是完全静态的，您可以将其一键部署到免费的托管平台：
-* **GitHub Pages**: 将代码推送到仓库，并在 `Settings -> Pages` 中开启即可。
-* **Vercel / Netlify / Cloudflare Pages**: 关联本仓库，构建命令留空，发布目录选择根目录。
 
 ---
 
